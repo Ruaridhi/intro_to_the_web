@@ -15,15 +15,20 @@ require 'sinatra'
 #   "Hello, again..."
 # end
 
-get '/random-cat'do
+get '/random-cat' do
   @rand_name = ["Amigo", "Oscar", "Viking"].sample
   erb(:random)
 end
 
-get '/named-cat'do
+post '/named-cat' do
+  p params
   @age = params[:age]
   @name = params[:name]
   puts params[:age]
   puts params[:name]
   erb(:named)
+end
+
+get '/form' do
+  erb(:form)
 end
