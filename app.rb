@@ -5,12 +5,16 @@ get '/' do
   "kuhdauduwed"
 end
 
+get '/hello/:name' do
+  # matches "GET /hello/foo" and "GET /hello/bar"
+  # params['name'] is 'foo' or 'bar'
+  "Hello #{params['name']}!"
+end
+
 get '/secret'do
   "Hello, again..."
 end
 
 get '/cat'do
-  "<div style = 'border: 3px dashed red'>
-  <img src = 'http://bit.ly/1eze8aE'>
-  </div>"
+  erb(:index)
 end
