@@ -17,11 +17,13 @@ require 'sinatra'
 
 get '/random-cat'do
   @rand_name = ["Amigo", "Oscar", "Viking"].sample
-  erb(:index)
+  erb(:random)
 end
 
 get '/named-cat'do
   @age = params[:age]
-  @rand_name = params[:name]
-  erb(:index)
+  @name = params[:name]
+  puts params[:age]
+  puts params[:name]
+  erb(:named)
 end
