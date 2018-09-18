@@ -1,8 +1,11 @@
+#require Sinatra app file
 require './lib/app.rb'
+
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
+#Tell Capybara about our app class
 Capybara.app = Battle
 
 ENV['RACK_ENV'] = 'test'
