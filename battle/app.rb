@@ -6,7 +6,6 @@ class Battle < Sinatra::Base
     erb(:index)
   end
 
-
   post '/names' do
     @title = params[:title]
     @name1 = params[:name1]
@@ -14,7 +13,6 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
-   # start the server if ruby file executed directly
-   run! if app_file == $0
+  run! if app_file == $0
 
 end
