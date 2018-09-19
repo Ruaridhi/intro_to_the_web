@@ -1,5 +1,5 @@
 #require Sinatra app file
-require './lib/app.rb'
+require './app.rb'
 
 require 'capybara'
 require 'capybara/rspec'
