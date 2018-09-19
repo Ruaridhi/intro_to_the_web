@@ -1,4 +1,4 @@
-require './lib/app'
+require './app'
 
 feature 'visit_homepage', type: :feature do
   # scenario 'hompage says testing infrastructure working!' do
@@ -9,7 +9,6 @@ feature 'visit_homepage', type: :feature do
 
   scenario 'prints page title and users put in names' do
     visit '/'
-    expect(page).to have_content('Let the Battle Commence!')
     fill_in 'name1', with: 'Rory'
     fill_in 'name2', with: 'Seb'
     click_button 'Submit'
