@@ -6,8 +6,10 @@ feature 'visit_homepage', type: :feature do
   #   expect(page).to have_content('Testing infrastructure working!')
   # end
 
-  scenario 'users put in name' do
+
+  scenario 'prints page title and users put in names' do
     visit '/'
+    expect(page).to have_content('Let the Battle Commence!')
     fill_in 'name1', with: 'Rory'
     fill_in 'name2', with: 'Seb'
     click_button 'Submit'
