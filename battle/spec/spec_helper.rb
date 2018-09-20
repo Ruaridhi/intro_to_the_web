@@ -1,10 +1,10 @@
 #require Sinatra app file
 require './app.rb'
 require 'features/web_helpers.rb'
-
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+
 
 #Tell Capybara about our app class
 Capybara.app = Battle
