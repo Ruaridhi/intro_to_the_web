@@ -2,21 +2,13 @@ require 'player.rb'
 
 describe Player do
 
-# let (:subject) { described_class.new('name') }
 subject(:player) { described_class.new ('name')}
-subject(:rory) { Player.new('Rory') }
-subject(:freya) { Player.new('Freya') }
+let(:rory) { Player.new('Rory') }
+let(:freya) { Player.new('Seb') }
 
 
   it 'prints player name' do
     expect(player.name).to eq('name')
-  end
-
-  describe '#attack' do
-    it 'launches an attack on a player' do
-      expect(rory).to receive(:reduce_hp)
-      freya.attack(rory)
-    end  
   end
 
   describe '#reduce_hp' do
